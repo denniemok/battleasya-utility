@@ -1,0 +1,32 @@
+name: BAUtility
+author: Dennie
+main: com.battleasya.BAUtility
+version: 1.0.0
+website: http://battleasya.com
+description: BattleAsya Utility.
+commands:
+  sc:
+    description: BattleAsya Utility Command.
+  sct:
+    description: BattleAsya Utility Command.
+  abc:
+    description: BattleAsya Utility Command.
+  bbc:
+    description: BattleAsya Utility Command.
+  nbc:
+    description: BattleAsya Utility Command.
+  sbc:
+    description: BattleAsya Utility Command.
+  tbc:
+    description: BattleAsya Utility Command.
+  ping:
+    description: BattleAsya Utility Command.
+  remind:
+    description: BattleAsya Utility Command.
+permissions:
+  staffbc.use:
+    description: BattleAsya Utility Command.
+    default: op
+  staff.chat:
+    description: BattleAsya Utility Command.
+    default: op
