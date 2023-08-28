@@ -5,7 +5,6 @@ import com.battleasya.Cmd.StaffChat.sc;
 import com.battleasya.Cmd.StaffChat.sct;
 import com.battleasya.Cmd.Utility.ping;
 import com.battleasya.Cmd.Utility.remind;
-import com.battleasya.Handler.Lobby;
 import com.battleasya.Handler.PexBlock;
 import com.battleasya.Handler.StaffChat;
 import com.battleasya.Handler.Reconnect;
@@ -44,7 +43,6 @@ public class BAUtility extends JavaPlugin {
         getCommand("remind").setExecutor(new remind());
 
         /* listener */
-        getServer().getPluginManager().registerEvents(new Lobby(this), this);
         getServer().getPluginManager().registerEvents(new PexBlock(), this);
         getServer().getPluginManager().registerEvents(new Reconnect(this), this);
         getServer().getPluginManager().registerEvents(new StaffChat(this), this);
