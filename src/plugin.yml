@@ -1,7 +1,7 @@
 name: BAUtility
-author: Dennie
 main: com.battleasya.BAUtility
 version: 1.0.0
+author: Dennie
 website: http://battleasya.com
 description: BattleAsya Utility.
 commands:
