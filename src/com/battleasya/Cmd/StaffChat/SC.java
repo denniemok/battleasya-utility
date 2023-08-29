@@ -17,7 +17,7 @@ public class SC implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
-        if(!sender.hasPermission("staff.chat")) {
+        if(!sender.hasPermission("staffchat.use")) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Unknown Command."));
             return true;
         }

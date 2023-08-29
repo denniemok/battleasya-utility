@@ -28,6 +28,6 @@ permissions:
   staffbc.use:
     description: BattleAsya Utility Command.
     default: op
-  staff.chat:
+  staffchat.use:
     description: BattleAsya Utility Command.
     default: op
