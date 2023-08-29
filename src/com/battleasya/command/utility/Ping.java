@@ -1,8 +1,8 @@
 package com.battleasya.command.utility;
 
+import com.battleasya.handler.Util;
 import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -29,7 +29,7 @@ public class Ping implements CommandExecutor {
                 Player p = Bukkit.getPlayer(sender.getName());
                 // Deprecated: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * 0.8);
                 int ping = (int) (getPing(p) * 0.8);
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Your ping is &c" + ping + " &6ms."));
+                Util.msgPlayer(sender, "&6Your ping is &c" + ping + " &6ms.");
                 return true;
             }
 
@@ -38,12 +38,12 @@ public class Ping implements CommandExecutor {
                 if (p != null && !VanishAPI.isInvisible(p)) {
                     // Deprecated: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * 0.8);
                     int ping = (int) (getPing(p) * 0.8);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c" + p.getName() + "&6's ping is &c" + ping + " &6ms."));
+                    Util.msgPlayer(sender, "&c" + p.getName() + "&6's ping is &c" + ping + " &6ms.");
                     return true;
                 }
             }
 
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /ping [name]"));
+            Util.msgPlayer(sender, "&cSyntax: /ping [name]");
             return true;
 
         } catch (Exception e) {

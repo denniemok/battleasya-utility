@@ -16,7 +16,7 @@ public class PexBlock implements Listener {
 
         if (msg.startsWith("/pex") || msg.startsWith("/permissionsex")) {
             event.setCancelled(true);
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Unknown Command."));
+            Util.msgPlayer(p, "&8(&4&l!&8) &6Unknown Command.");
         }
 
     }

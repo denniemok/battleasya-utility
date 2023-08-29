@@ -1,6 +1,6 @@
 package com.battleasya.command.broadcast;
 
-import org.bukkit.ChatColor;
+import com.battleasya.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,12 +12,12 @@ public class TBC implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
         if(!sender.hasPermission("staffbc.use")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Unknown Command."));
+            Util.msgPlayer(sender, "&8(&4&l!&8) &6Unknown Command.");
             return true;
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /tbc <message>"));
+            Util.msgPlayer(sender, "&cSyntax: /tbc <message>");
             return true;
         }
 

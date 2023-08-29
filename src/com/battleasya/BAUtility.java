@@ -8,28 +8,16 @@ import com.battleasya.command.utility.Remind;
 import com.battleasya.handler.PexBlock;
 import com.battleasya.handler.StaffChat;
 import com.battleasya.handler.Reconnect;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class BAUtility extends JavaPlugin {
-
-    public HashMap<String, Integer> staffList = new HashMap<>();
-
-    public HashMap<String, Integer> chatToggleList = new HashMap<>();
-
-    public HashMap<String, Integer> reconnectCD = new HashMap<>();
 
     @Override
     public void onEnable() {
 
         /* staff chat */
-        getCommand("sc").setExecutor(new SC(this));
-        getCommand("sct").setExecutor(new SCT(this));
+        getCommand("sc").setExecutor(new SC());
+        getCommand("sct").setExecutor(new SCT());
 
         /* staff broadcast */
         getCommand("abc").setExecutor(new ABC());
@@ -45,17 +33,8 @@ public class BAUtility extends JavaPlugin {
         /* listener */
         getServer().getPluginManager().registerEvents(new PexBlock(), this);
         getServer().getPluginManager().registerEvents(new Reconnect(this), this);
-        getServer().getPluginManager().registerEvents(new StaffChat(this), this);
+        getServer().getPluginManager().registerEvents(new StaffChat(), this);
 
-    }
-
-    public void msgStaff(String msg) {
-        for (Map.Entry<String, Integer> entry : staffList.entrySet()) {
-            Player player = Bukkit.getPlayer(entry.getKey());
-            if (player != null) {
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', msg));
-            }
-        }
     }
 
 }

@@ -1,7 +1,6 @@
 package com.battleasya.command.broadcast;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import com.battleasya.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,12 +11,12 @@ public class ABC implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
         if(!sender.hasPermission("staffbc.use")) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Unknown Command."));
+            Util.msgPlayer(sender,"&8(&4&l!&8) &6Unknown Command.");
             return true;
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /abc <message>"));
+            Util.msgPlayer(sender, "&cSyntax: /abc <message>");
             return true;
         }
 
@@ -27,7 +26,7 @@ public class ABC implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4BattleHawk &8// &c" + str));
+        Util.broadcast("&4BattleHawk &8// &c" + str);
         return true;
 
     }
