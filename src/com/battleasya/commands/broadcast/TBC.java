@@ -1,4 +1,4 @@
-package com.battleasya.Cmd.Broadcast;
+package com.battleasya.commands.broadcast;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

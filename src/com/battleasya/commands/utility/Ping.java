@@ -1,4 +1,4 @@
-package com.battleasya.Cmd.Utility;
+package com.battleasya.commands.utility;
 
 import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;
@@ -38,7 +38,7 @@ public class Ping implements CommandExecutor {
                 if (p != null && !VanishAPI.isInvisible(p)) {
                     // Deprecated: int ping = (int) (((((CraftPlayer) p).getHandle()).ping) * 0.8);
                     int ping = (int) (getPing(p) * 0.8);
-                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c" + args[0] + "&6's ping is &c" + ping + " &6ms."));
+                    sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c" + p.getName() + "&6's ping is &c" + ping + " &6ms."));
                     return true;
                 }
             }

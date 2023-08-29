@@ -1,13 +1,13 @@
 package com.battleasya;
 
-import com.battleasya.Cmd.Broadcast.*;
-import com.battleasya.Cmd.StaffChat.SC;
-import com.battleasya.Cmd.StaffChat.SCT;
-import com.battleasya.Cmd.Utility.Ping;
-import com.battleasya.Cmd.Utility.Remind;
-import com.battleasya.Hdlr.PexBlock;
-import com.battleasya.Hdlr.StaffChat;
-import com.battleasya.Hdlr.Reconnect;
+import com.battleasya.commands.broadcast.*;
+import com.battleasya.commands.staffchat.SC;
+import com.battleasya.commands.staffchat.SCT;
+import com.battleasya.commands.utility.Ping;
+import com.battleasya.commands.utility.Remind;
+import com.battleasya.handler.PexBlock;
+import com.battleasya.handler.StaffChat;
+import com.battleasya.handler.Reconnect;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

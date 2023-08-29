@@ -1,4 +1,4 @@
-package com.battleasya.Cmd.StaffChat;
+package com.battleasya.commands.staffchat;
 
 import com.battleasya.BAUtility;
 import org.bukkit.ChatColor;

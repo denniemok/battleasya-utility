@@ -1,4 +1,4 @@
-package com.battleasya.Cmd.Broadcast;
+package com.battleasya.commands.broadcast;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -6,7 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class BBC implements CommandExecutor {
+public class NBC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -17,7 +17,7 @@ public class BBC implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /bbc <message>"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /nbc <message>"));
             return true;
         }
 
@@ -28,13 +28,7 @@ public class BBC implements CommandExecutor {
         }
 
         Bukkit.broadcastMessage("");
-        Bukkit.broadcastMessage("");
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&7&m---»--*-------------------------------------*--«---"));
-        Bukkit.broadcastMessage("");
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&c" + str));
-        Bukkit.broadcastMessage("");
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&7&m---»--*-------------------------------------*--«---"));
-        Bukkit.broadcastMessage("");
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4&l[&a&l" + sender.getName() + "&4&l] &c" + str));
         Bukkit.broadcastMessage("");
         return true;
 
