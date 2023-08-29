@@ -1,4 +1,4 @@
-package com.battleasya.commands.utility;
+package com.battleasya.command.utility;
 
 import de.myzelyam.api.vanish.VanishAPI;
 import org.bukkit.Bukkit;

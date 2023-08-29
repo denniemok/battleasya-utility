@@ -1,10 +1,10 @@
 package com.battleasya;
 
-import com.battleasya.commands.broadcast.*;
-import com.battleasya.commands.staffchat.SC;
-import com.battleasya.commands.staffchat.SCT;
-import com.battleasya.commands.utility.Ping;
-import com.battleasya.commands.utility.Remind;
+import com.battleasya.command.broadcast.*;
+import com.battleasya.command.staffchat.SC;
+import com.battleasya.command.staffchat.SCT;
+import com.battleasya.command.utility.Ping;
+import com.battleasya.command.utility.Remind;
 import com.battleasya.handler.PexBlock;
 import com.battleasya.handler.StaffChat;
 import com.battleasya.handler.Reconnect;
