@@ -1,9 +1,10 @@
 name: BAUtility
 main: com.battleasya.BAUtility
-version: 1.0.0
+version: 2.0.0
 author: Dennie
 website: http://battleasya.com
 description: BattleAsya Utility.
+depend: [PremiumVanish]
 commands:
   sc:
     description: BattleAsya Utility Command.
