@@ -24,7 +24,7 @@ public class Remind implements CommandExecutor {
                 for (int i = 1; i < args.length; i++) {
                     str.append(args[i]).append(" ");
                 }
-                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&c" + p.getName() + " &7has been reminded for &f" + str));
+                Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&',"&c" + p.getName() + " &7has been reminded for &f" + str + "&7."));
                 return true;
             }
         }
