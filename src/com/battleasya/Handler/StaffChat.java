@@ -17,7 +17,7 @@ public class StaffChat implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
         String playerName = event.getPlayer().getName();
-        if (plugin.chatToggle.containsKey(playerName)) {
+        if (plugin.chatToggleList.containsKey(playerName)) {
             event.setCancelled(true);
             plugin.msgStaff("&8[&4Staff Chat&8] &f&l" + playerName + "&8: &e" + event.getMessage());
         }
@@ -26,15 +26,15 @@ public class StaffChat implements Listener {
     @EventHandler
     public void onLeave(PlayerQuitEvent event){
         String playerName = event.getPlayer().getName();
-        plugin.staff.remove(playerName);
-        plugin.chatToggle.remove(playerName);
+        plugin.staffList.remove(playerName);
+        plugin.chatToggleList.remove(playerName);
     }
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event){
         Player player = event.getPlayer();
         if (player.hasPermission("staff.chat")) {
-            plugin.staff.put(player.getName(), 1);
+            plugin.staffList.put(player.getName(), 1);
         }
     }
 
