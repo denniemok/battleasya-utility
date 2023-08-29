@@ -3,31 +3,31 @@ main: com.battleasya.BAUtility
 version: 2.0.1
 author: Dennie
 website: http://battleasya.com
-description: BattleAsya Utility.
+description: BattleAsya Utility
 depend: [PremiumVanish]
 commands:
   sc:
-    description: BattleAsya Utility Command.
+    description: Send a message in staff chat.
   sct:
-    description: BattleAsya Utility Command.
+    description: Enable or disable staff chat mode.
   abc:
-    description: BattleAsya Utility Command.
+    description: Anti-Cheat broadcast.
   bbc:
-    description: BattleAsya Utility Command.
+    description: Big broadcast.
   nbc:
-    description: BattleAsya Utility Command.
+    description: Name broadcast.
   sbc:
-    description: BattleAsya Utility Command.
+    description: Staff broadcast.
   tbc:
-    description: BattleAsya Utility Command.
+    description: Title broadcast.
   ping:
-    description: BattleAsya Utility Command.
+    description: Ping yourself or someone.
   remind:
-    description: BattleAsya Utility Command.
+    description: Remind someone with a message.
 permissions:
   staffbc.use:
-    description: BattleAsya Utility Command.
+    description: Ability to broadcast.
     default: op
   staffchat.use:
-    description: BattleAsya Utility Command.
+    description: Ability to send messages in staff chat.
     default: op
