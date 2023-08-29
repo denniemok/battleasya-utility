@@ -1,23 +1,29 @@
-package com.battleasya.Cmd.Broadcast;
+package com.battleasya.Cmd.StaffChat;
 
-import org.bukkit.Bukkit;
+import com.battleasya.BAUtility;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class abc implements CommandExecutor {
+public class SC implements CommandExecutor {
+
+    private final BAUtility plugin;
+
+    public SC(BAUtility plugin) {
+        this.plugin = plugin;
+    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
-        if(!sender.hasPermission("staffbc.use")) {
+        if(!sender.hasPermission("staff.chat")) {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Unknown Command."));
             return true;
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /abc <message>"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /sc <message>"));
             return true;
         }
 
@@ -27,7 +33,7 @@ public class abc implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4BattleHawk &8// &c" + str));
+        plugin.msgStaff("&8[&4Staff Chat&8] &f&l" + sender.getName() + "&8: &e" + str);
         return true;
 
     }

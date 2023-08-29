@@ -7,11 +7,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class sct implements CommandExecutor {
+public class SCT implements CommandExecutor {
 
     private final BAUtility plugin;
 
-    public sct(BAUtility plugin) {
+    public SCT(BAUtility plugin) {
         this.plugin = plugin;
     }
 
@@ -28,17 +28,17 @@ public class sct implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            if (plugin.chatToggle.containsKey(sender.getName())) {
-                plugin.chatToggle.remove(sender.getName());
+            if (plugin.chatToggleList.containsKey(sender.getName())) {
+                plugin.chatToggleList.remove(sender.getName());
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&4Staff Chat&8] &cToggle Disabled."));
             } else {
-                plugin.chatToggle.put(sender.getName(), 1);
+                plugin.chatToggleList.put(sender.getName(), 1);
                 sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&4Staff Chat&8] &aToggle Enabled."));
             }
             return true;
         }
 
-        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8[&4Staff Chat&8] &c/sct"));
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /sct"));
         return true;
 
     }

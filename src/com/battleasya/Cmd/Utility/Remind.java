@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class remind implements CommandExecutor {
+public class Remind implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -29,7 +29,7 @@ public class remind implements CommandExecutor {
             }
         }
 
-        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&8(&4&l!&8) &6Syntax: /remind <name> <message>"));
+        sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /remind <name> <message>"));
         return true;
 
     }

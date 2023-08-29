@@ -16,10 +16,13 @@ public class Reconnect implements Listener {
 
     @EventHandler
     public void onJoin(AsyncPlayerPreLoginEvent event) {
+
         String playerName = event.getName();
+
         if (cooldown(playerName)) {
             event.disallow(AsyncPlayerPreLoginEvent.Result.KICK_OTHER, "Please wait for 10 seconds before joining back!");
         }
+
     }
 
     public boolean cooldown(String playerName) {
@@ -32,7 +35,7 @@ public class Reconnect implements Listener {
                 public void run() {
                     plugin.reconnectCD.remove(playerName);
                 }
-            }).runTaskLater(plugin, 200L);
+            }).runTaskLater(plugin, 200L); // in ticks
             return false;
         }
     }

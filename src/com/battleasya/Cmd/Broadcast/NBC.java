@@ -1,12 +1,12 @@
 package com.battleasya.Cmd.Broadcast;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
-public class tbc implements CommandExecutor {
+public class NBC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -17,7 +17,7 @@ public class tbc implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /tbc <message>"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /nbc <message>"));
             return true;
         }
 
@@ -27,8 +27,9 @@ public class tbc implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Player p = (Player) sender;
-        p.chat("/tm bc &f\\n&f" + str);
+        Bukkit.broadcastMessage("");
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4&l[&a&l" + sender.getName() + "&4&l] &c" + str));
+        Bukkit.broadcastMessage("");
         return true;
 
     }

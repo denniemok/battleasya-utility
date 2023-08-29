@@ -6,7 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class nbc implements CommandExecutor {
+public class ABC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -17,7 +17,7 @@ public class nbc implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /nbc <message>"));
+            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cSyntax: /abc <message>"));
             return true;
         }
 
@@ -27,9 +27,7 @@ public class nbc implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Bukkit.broadcastMessage("");
-        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4&l[&a&l" + sender.getName() + "&4&l] &c" + str));
-        Bukkit.broadcastMessage("");
+        Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', "&4BattleHawk &8// &c" + str));
         return true;
 
     }
