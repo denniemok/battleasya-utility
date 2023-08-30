@@ -25,8 +25,10 @@ public class Remind implements CommandExecutor {
                     str.append(args[i]).append(" ");
                 }
                 Util.broadcast("&c" + p.getName() + " &7has been reminded for &f" + str + "&7.");
-                return true;
+            } else {
+                Util.msgPlayer(sender, "&cError: &4You cannot remind that person.");
             }
+            return true;
         }
 
         Util.msgPlayer(sender, "&cSyntax: /remind <name> <message>");
