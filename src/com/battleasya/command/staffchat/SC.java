@@ -1,5 +1,6 @@
 package com.battleasya.command.staffchat;
 
+import com.battleasya.BAUtility;
 import com.battleasya.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,6 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SC implements CommandExecutor {
+
+    private final BAUtility plugin;
+
+    public SC(BAUtility plugin) {
+        this.plugin = plugin;
+    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -31,7 +38,7 @@ public class SC implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Util.msgStaff("&8[&4Staff Chat&8] &f&l" + sender.getName() + "&8: &e" + str);
+        plugin.util.msgStaff("&8[&4Staff Chat&8] &f&l" + sender.getName() + "&8: &e" + str);
         return true;
 
     }

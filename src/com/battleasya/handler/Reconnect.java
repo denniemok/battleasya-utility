@@ -26,14 +26,14 @@ public class Reconnect implements Listener {
     }
 
     public boolean cooldown(String playerName) {
-        if (Util.cooldownList.containsKey(playerName)) {
+        if (plugin.cooldownList.containsKey(playerName)) {
             return true;
         } else {
-            Util.cooldownList.put(playerName, 1);
+            plugin.cooldownList.put(playerName, 1);
             (new BukkitRunnable() {
                 @Override
                 public void run() {
-                    Util.cooldownList.remove(playerName);
+                    plugin.cooldownList.remove(playerName);
                 }
             }).runTaskLater(plugin, 200L); // in ticks
             return false;

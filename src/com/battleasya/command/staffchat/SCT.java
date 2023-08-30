@@ -1,5 +1,6 @@
 package com.battleasya.command.staffchat;
 
+import com.battleasya.BAUtility;
 import com.battleasya.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,6 +8,12 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class SCT implements CommandExecutor {
+
+    private final BAUtility plugin;
+
+    public SCT(BAUtility plugin) {
+        this.plugin = plugin;
+    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -21,11 +28,11 @@ public class SCT implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            if (Util.chatToggleList.containsKey(sender.getName())) {
-                Util.chatToggleList.remove(sender.getName());
+            if (plugin.chatToggleList.containsKey(sender.getName())) {
+                plugin.chatToggleList.remove(sender.getName());
                 Util.msgPlayer(sender, "&8[&4Staff Chat&8] &cChat Mode Disabled.");
             } else {
-                Util.chatToggleList.put(sender.getName(), 1);
+                plugin.chatToggleList.put(sender.getName(), 1);
                 Util.msgPlayer(sender, "&8[&4Staff Chat&8] &aChat Mode Enabled.");
             }
             return true;
