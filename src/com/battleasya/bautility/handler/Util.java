@@ -1,20 +1,20 @@
-package com.battleasya.handler;
+package com.battleasya.bautility.handler;
 
-import com.battleasya.BAUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Util {
 
-    private final BAUtility plugin;
+    public static HashMap<String, Integer> staffList = new HashMap<>();
 
-    public Util(BAUtility plugin) {
-        this.plugin = plugin;
-    }
+    public static HashMap<String, Integer> chatToggleList = new HashMap<>();
+
+    public static HashMap<String, Integer> cooldownList = new HashMap<>();
 
     public static void msgPlayer(CommandSender sender, String message){
         sender.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
@@ -24,14 +24,14 @@ public class Util {
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', message));
     }
 
-    public void msgStaff(String message) {
-        for (Map.Entry<String, Integer> entry : plugin.staffList.entrySet()) {
+    public static void msgStaff(String message) {
+        for (Map.Entry<String, Integer> entry : staffList.entrySet()) {
             Player player = Bukkit.getPlayer(entry.getKey());
             if (player != null) {
                 msgPlayer(player, message);
             } else {
-                plugin.staffList.remove(entry.getKey());
-                plugin.chatToggleList.remove(entry.getKey());
+                staffList.remove(entry.getKey());
+                chatToggleList.remove(entry.getKey());
             }
         }
     }

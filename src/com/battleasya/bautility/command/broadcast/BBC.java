@@ -1,6 +1,6 @@
-package com.battleasya.command.broadcast;
+package com.battleasya.bautility.command.broadcast;
 
-import com.battleasya.handler.Util;
+import com.battleasya.bautility.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;

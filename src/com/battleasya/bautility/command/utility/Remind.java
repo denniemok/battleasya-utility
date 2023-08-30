@@ -1,6 +1,6 @@
-package com.battleasya.command.utility;
+package com.battleasya.bautility.command.utility;
 
-import com.battleasya.handler.Util;
+import com.battleasya.bautility.handler.Util;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

@@ -1,23 +1,22 @@
-package com.battleasya.command.broadcast;
+package com.battleasya.bautility.command.broadcast;
 
-import com.battleasya.handler.Util;
+import com.battleasya.bautility.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
-public class TBC implements CommandExecutor {
+public class ABC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
 
         if(!sender.hasPermission("staffbc.use")) {
-            Util.msgPlayer(sender, "&8(&4&l!&8) &6Unknown Command.");
+            Util.msgPlayer(sender,"&8(&4&l!&8) &6Unknown Command.");
             return true;
         }
 
         if (args.length == 0) {
-            Util.msgPlayer(sender, "&cSyntax: /tbc <message>");
+            Util.msgPlayer(sender, "&cSyntax: /abc <message>");
             return true;
         }
 
@@ -27,8 +26,7 @@ public class TBC implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Player p = (Player) sender;
-        p.chat("/tm bc &f\\n&f" + str);
+        Util.broadcast("&4BattleHawk &8// &c" + str);
         return true;
 
     }

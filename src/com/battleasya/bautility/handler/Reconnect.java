@@ -1,6 +1,6 @@
-package com.battleasya.handler;
+package com.battleasya.bautility.handler;
 
-import com.battleasya.BAUtility;
+import com.battleasya.bautility.BAUtility;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.*;
@@ -26,14 +26,14 @@ public class Reconnect implements Listener {
     }
 
     public boolean cooldown(String playerName) {
-        if (plugin.cooldownList.containsKey(playerName)) {
+        if (Util.cooldownList.containsKey(playerName)) {
             return true;
         } else {
-            plugin.cooldownList.put(playerName, 1);
+            Util.cooldownList.put(playerName, 1);
             (new BukkitRunnable() {
                 @Override
                 public void run() {
-                    plugin.cooldownList.remove(playerName);
+                    Util.cooldownList.remove(playerName);
                 }
             }).runTaskLater(plugin, 200L); // in ticks
             return false;

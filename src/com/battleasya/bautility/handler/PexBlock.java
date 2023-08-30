@@ -1,4 +1,4 @@
-package com.battleasya.handler;
+package com.battleasya.bautility.handler;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
