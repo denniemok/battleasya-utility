@@ -15,15 +15,14 @@
 <hr>
 
 ### Introduction
-This simple extension introduces several common utilities for use on BattleAsya. Since the extension was initially made for exclusive use on BattleAsya, most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
+This simple extension introduces several common utilities for exclusive use on BattleAsya. Most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
 
-BattleAsya has been using this extension on all its server instances ever since 2021. Until today, the functions it offers still provides a list of useful in-service utilities for BattleAsya's daily operations. <p>
+BattleAsya has been using this extension on all its server instances ever since 2021. Until today, the extension still provides a list of useful in-service utilities to back up BattleAsya's daily operations. <p>
 
 <hr>
 
 ### Components
-- General Broadcasters <br>
-(Anti-Cheat Broadcast, Big Broadcast, Name Broadcast, Staff Broadcast, Title Broadcast)
+- General Broadcasters
 - Staff Chat Simplified
 - Ping Extension to EssentialsX
 - Remind Extension to Litebans
