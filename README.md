@@ -1,16 +1,16 @@
 <br>
 <h3 align="center">BattleAsya Utility</h3>
-<p align="center">A hybrid of utilities for BattleAsya. </p>
+<p align="center">
+    <img src="https://img.shields.io/badge/Version-2.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
+</p>
 
 <p align="center">
+    A hybrid of utilities for BattleAsya.<br>
     <a href="https://github.com/denniemok/BA-Utility/releases">Latest Release</a> •
     <a href="https://github.com/denniemok/BA-Utility/wiki">User Guide</a> •
     <a href="https://github.com/denniemok/BA-Utility/issues">Issue Tracker</a>
 </p>
-
-<p align="center">
-    <img src="https://img.shields.io/badge/Version-2.0.3-green"> <img src="https://img.shields.io/badge/Spigot-1.8+-lightgrey"> <img src="https://img.shields.io/badge/License-MIT-blue"> <img src="https://img.shields.io/badge/Language-Java-yellow">
-</p><br>
+<br>
 
 <hr>
 
