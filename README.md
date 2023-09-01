@@ -5,7 +5,6 @@
 </p>
 
 <p align="center">
-    A hybrid of utilities for BattleAsya.<br>
     <a href="https://github.com/denniemok/battleasya-utility/releases">Latest Release</a> •
     <a href="https://github.com/denniemok/battleasya-utility/wiki">User Guide</a> •
     <a href="https://github.com/denniemok/battleasya-utility/issues">Issue Tracker</a>
