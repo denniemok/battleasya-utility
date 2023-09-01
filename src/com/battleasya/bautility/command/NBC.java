@@ -1,11 +1,11 @@
-package com.battleasya.bautility.command.broadcast;
+package com.battleasya.bautility.command;
 
 import com.battleasya.bautility.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class BBC implements CommandExecutor {
+public class NBC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -16,7 +16,7 @@ public class BBC implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            Util.msgPlayer(sender, "&cSyntax: /bbc <message>");
+            Util.msgPlayer(sender, "&cSyntax: /nbc <message>");
             return true;
         }
 
@@ -27,13 +27,7 @@ public class BBC implements CommandExecutor {
         }
 
         Util.broadcast("");
-        Util.broadcast("");
-        Util.broadcast("&7&m---»--*-------------------------------------*--«---");
-        Util.broadcast("");
-        Util.broadcast("&c" + str);
-        Util.broadcast("");
-        Util.broadcast("&7&m---»--*-------------------------------------*--«---");
-        Util.broadcast("");
+        Util.broadcast("&4&l[&a&l" + sender.getName() + "&4&l] &c" + str);
         Util.broadcast("");
         return true;
 

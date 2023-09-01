@@ -1,11 +1,12 @@
-package com.battleasya.bautility.command.broadcast;
+package com.battleasya.bautility.command;
 
 import com.battleasya.bautility.handler.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
-public class NBC implements CommandExecutor {
+public class TBC implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
@@ -16,7 +17,7 @@ public class NBC implements CommandExecutor {
         }
 
         if (args.length == 0) {
-            Util.msgPlayer(sender, "&cSyntax: /nbc <message>");
+            Util.msgPlayer(sender, "&cSyntax: /tbc <message>");
             return true;
         }
 
@@ -26,9 +27,8 @@ public class NBC implements CommandExecutor {
             str.append(arg).append(" ");
         }
 
-        Util.broadcast("");
-        Util.broadcast("&4&l[&a&l" + sender.getName() + "&4&l] &c" + str);
-        Util.broadcast("");
+        Player p = (Player) sender;
+        p.chat("/tm bc &f\\n&f" + str);
         return true;
 
     }
