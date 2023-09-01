@@ -1,15 +1,11 @@
 name: BA-Utility
 main: com.battleasya.bautility.BAUtility
-version: 2.0.3
+version: 2.0.4c
+api-version: 1.14
 author: Dennie
 website: http://battleasya.com
 description: BattleAsya Utility
-depend: [PremiumVanish]
 commands:
-  sc:
-    description: Send a message in staff chat.
-  sct:
-    description: Enable or disable staff chat mode.
   abc:
     description: Anti-Cheat broadcast.
   bbc:
@@ -20,14 +16,7 @@ commands:
     description: Staff broadcast.
   tbc:
     description: Title broadcast.
-  ping:
-    description: Ping yourself or someone.
-  remind:
-    description: Remind someone with a message.
 permissions:
   staffbc.use:
     description: Ability to broadcast.
-    default: op
-  staffchat.use:
-    description: Ability to send messages in staff chat.
     default: op
