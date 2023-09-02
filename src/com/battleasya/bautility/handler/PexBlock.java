@@ -11,7 +11,7 @@ public class PexBlock implements Listener {
     public void onCommand(PlayerCommandPreprocessEvent event) {
 
         Player p = event.getPlayer();
-        String msg = event.getMessage();
+        String msg = event.getMessage().toLowerCase();
 
         if (msg.startsWith("/pex") || msg.startsWith("/permissionsex")) {
             event.setCancelled(true);
