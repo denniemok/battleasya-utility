@@ -1,4 +1,4 @@
-name: BA-Utility
+name: BAUtility
 main: com.battleasya.bautility.BAUtility
 version: 2.0.4c
 api-version: 1.14
