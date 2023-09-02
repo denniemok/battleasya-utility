@@ -14,9 +14,9 @@
 <hr>
 
 ### Introduction
-This simple extension introduces several common utilities for exclusive use on BattleAsya. Most of the messages and parameters were hard-coded (i.e., non-configurable).<p>
+This simple extension introduces several common utilities for exclusive use on BattleAsya. Most of the messages and parameters were hard-coded (i.e., non-configurable).
 
-BattleAsya has been using this extension on all its server instances ever since 2021. Until today, the extension still provides a list of useful in-service utilities to back up BattleAsya's daily operations. <p>
+BattleAsya has been using this extension on all its server instances ever since 2021. Until today, the extension still provides a list of useful in-service utilities to back up BattleAsya's daily operations.
 
 <hr>
 
@@ -35,14 +35,14 @@ BattleAsya has been using this extension on all its server instances ever since 
 - Java 8 or above
 - Spigot 1.8 or above, or equivalent forks
 - Permission plugin, preferably LuckPerms or PermissionsEX
-- PremiumVanish 2.5.14 <br>
+- PremiumVanish 2.5.14
 
 <hr>
 
 ### Build Dependencies
 - Java 8
-- Spigot API 1.8.8 R0.1
-- PremiumVanish 2.5.14 <br>
+- Spigot-API 1.8.8 R0.1
+- PremiumVanish 2.5.14
 
 <hr>
 
